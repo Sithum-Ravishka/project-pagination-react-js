@@ -1,0 +1,34 @@
+.footer-them{
+
+    .footer-top{
+        position: relative;
+        color: #ddd;
+        background: #333;
+        padding: 20px 0;
+        border-top: 8px solid #ff8500;
+        border-top-color: rgb(255, 133, 0);
+        margin-top: 20px;
+        border-radius: 20px 20px 0px 0px;
+        box-shadow: 0 -8px 0 rgba(0,0,0,.1);
+      }
+    .footer-bottom{
+        position: relative;
+        background: #2e2e2e;
+        line-height: 35px;
+        border-top: 1px solid #444;
+        color: #ccc;
+        padding: 15px 0;
+        display: flex;
+        flex-direction: row;
+
+        .right{
+            padding: 10px;
+            margin-left: 500px;
+        }
+
+        .left{
+            padding: 10px;
+            margin-left: 100px;
+        }
+    }
+}
