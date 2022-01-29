@@ -5,13 +5,11 @@ import { Pagination, PaginationItem } from '@material-ui/lab';
 import { Link } from 'react-router-dom';
 
 import { getMovies } from '../actions/movies';
-import useStyles from './styles';
+import './pagination.css';
 
 const Paginate = ({ page }) => {
   const { numberOfPages } = useSelector((state) => state.movies);
   const dispatch = useDispatch();
-
-  const classes = useStyles();
 
   useEffect(() => {
     if (page) {
@@ -20,8 +18,9 @@ const Paginate = ({ page }) => {
   }, [dispatch, page]);
 
   return (
-    <Pagination
-      classes={{ ul: classes.ul }}
+    <div className='pag-bl'>
+    <Pagination 
+      className= 'ul'
       count={numberOfPages}
       page={Number(page) || 1}
       variant="outlined"
@@ -30,6 +29,7 @@ const Paginate = ({ page }) => {
         <PaginationItem {...item} component={Link} to={`/movies?page=${item.page}`} />
       )}
     />
+    </div>
   );
 };
 

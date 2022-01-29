@@ -1,0 +1,58 @@
+.main-content {
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 1100px;
+        background-color: rgb(70, 70, 70);
+        padding: 20px 20px 20px 20px;
+        overflow: auto;
+        margin: auto;
+
+        .search{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 350px;
+            padding-bottom: 20px;
+            margin-left: 350px;
+            
+            .serInput{
+                width: 300px;
+                height: 40px;
+                border-radius: 4px;
+                border: 1px solid rgb(146, 146, 146);
+                padding: 0px 0px 0px 10px;
+                margin-right: 5px;
+            }
+
+            .searchButton{
+                background-color: rgb(190, 80, 1);
+                color: white;
+                cursor: pointer;
+                width: 80px;
+                height: 40px;
+                font-size: 18px;
+                border-radius: 4px;
+                border: none;
+
+                &:hover{
+                    background-color: rgb(131, 55, 0);
+                    color: white;
+                }
+            }
+        }
+        .movie{
+            width: 1000px;
+            padding-right: 30px;
+            margin-left: 50px;
+
+        }
+
+    }
+    .pag{
+        background-color: khaki;
+    }
+}

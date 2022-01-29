@@ -1,0 +1,88 @@
+.card {
+    border-radius: 5px;
+    position: relative;
+    width: 200px;
+    height: 460px;
+    background-color: lavender;
+    padding: 10px;
+    margin-right: 50px;
+    
+    .cardAction {
+      display: block;
+      text-align: initial;
+
+      .image{
+        width: 200px;
+        height: 250px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+
+    .overlay{
+       display: flex;
+       flex-direction: column;
+
+      .title{
+        font-size: 18px;
+        font-weight: bold;
+        padding: 5px 0px 5px 0px;
+        margin: auto;
+        cursor: pointer;
+      }
+
+      .cre{
+        font-size: 13px;
+        color:gray;
+      }
+
+      .time{
+        color: gray;
+        display: flex;
+        font-size: 13px;
+        flex-direction: row;
+        padding-top: 4px;
+        
+        .accTimeIcon{
+          font-size: 15px;
+          padding-right: 5px;
+        }
+      }
+    }
+    .tags{
+      display: flex;
+      flex-direction: row;
+      padding-top: 4px;
+
+      .tgFloder{
+        font-size: 15px;
+        padding-right: 5px;
+        color: gray;
+      }
+      .details{
+        font-size: 13px;
+        text-decoration: none;
+        color: rgb(136, 136, 136);
+        padding-bottom: 5px;
+      }
+    }
+
+    .cont{
+      display: flex;
+      flex-direction: column;
+      
+      .desc{
+        font-family:Impact;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .likeBtn{
+        color: blue;
+
+        .like{
+          color: blue;
+        }
+      }
+  }
+  }
