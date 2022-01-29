@@ -16,7 +16,7 @@ app.use(cors());
 app.use('/movies', movieRoutes);
 app.use("/user", userRouter);
 
-const CONNECTION_URL = 'mongodb+srv://SithumRavishkaSubZero:<SR1995Hasi27>18@cluster0.ww6o5.mongodb.net/SubZero?retryWrites=true&w=majority';
+const CONNECTION_URL = 'add your Url';
 const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
