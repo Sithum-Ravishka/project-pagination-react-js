@@ -52,13 +52,14 @@ const Home = () => {
         <div className='movie'>
             <Movies setCurrentId={setCurrentId} />
         </div>
-       
-      </div>
+      
+
         {(!searchQuery && !tags.length) && (
           <div className='pag'>
             <Pagination page={page} />
           </div>
         )}
+        </div>
     </div>
   );
 };
