@@ -4,7 +4,7 @@ import { Typography, CircularProgress, Grid, Divider } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Movie from '../Posts/Post/Movie';
-import { getMoviesByCreator, getMoviesBySearch } from '../../actions/movies';
+import { getMoviesBySearch } from '../../actions/movies';
 
 const CreatorOrTag = () => {
   const { name } = useParams();
@@ -17,7 +17,7 @@ const CreatorOrTag = () => {
     if (location.pathname.startsWith('/tags')) {
       dispatch(getMoviesBySearch({ tags: name }));
     } else {
-      dispatch(getMoviesByCreator(name));
+      
     }
   }, []);
 

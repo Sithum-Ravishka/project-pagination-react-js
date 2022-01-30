@@ -1,4 +1,4 @@
-import { START_LOADING, END_LOADING, FETCH_ALL, FETCH_MOVIE, FETCH_BY_SEARCH, CREATE, UPDATE, DELETE, LIKE, COMMENT, FETCH_BY_CREATOR } from '../constants/actionTypes';
+import { START_LOADING, END_LOADING, FETCH_ALL, FETCH_MOVIE, FETCH_BY_SEARCH } from '../constants/actionTypes';
 import * as api from '../api/index.js';
 
 export const getMovie = (id) => async (dispatch) => {
@@ -25,17 +25,7 @@ export const getMovies = (page) => async (dispatch) => {
   }
 };
 
-export const getMoviesByCreator = (name) => async (dispatch) => {
-  try {
-    dispatch({ type: START_LOADING });
-    const { data: { data } } = await api.fetchMoviesByCreator(name);
 
-    dispatch({ type: FETCH_BY_CREATOR, payload: { data } });
-    dispatch({ type: END_LOADING });
-  } catch (error) {
-    console.log(error);
-  }
-};
 
 export const getMoviesBySearch = (searchQuery) => async (dispatch) => {
   try {
@@ -49,59 +39,3 @@ export const getMoviesBySearch = (searchQuery) => async (dispatch) => {
   }
 };
 
-export const createMovie = (movie, history) => async (dispatch) => {
-  try {
-    dispatch({ type: START_LOADING });
-    const { data } = await api.createMovie(movie);
-
-    dispatch({ type: CREATE, payload: data });
-
-    history.push(`/movies/${data._id}`);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const updateMovie = (id, movie) => async (dispatch) => {
-  try {
-    const { data } = await api.updateMovie(id, movie);
-
-    dispatch({ type: UPDATE, payload: data });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const likeMovie = (id) => async (dispatch) => {
-  const user = JSON.parse(localStorage.getItem('profile'));
-
-  try {
-    const { data } = await api.likeMovie(id, user?.token);
-
-    dispatch({ type: LIKE, payload: data });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const commentMovie = (value, id) => async (dispatch) => {
-  try {
-    const { data } = await api.comment(value, id);
-
-    dispatch({ type: COMMENT, payload: data });
-
-    return data.comments;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const deleteMovie = (id) => async (dispatch) => {
-  try {
-    await await api.deleteMovie(id);
-
-    dispatch({ type: DELETE, payload: id });
-  } catch (error) {
-    console.log(error);
-  }
-};
