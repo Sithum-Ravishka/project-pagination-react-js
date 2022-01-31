@@ -20,7 +20,6 @@ const Paginate = ({ page }) => {
   return (
     <div className='pag-bl'>
     <Pagination 
-      className= 'ul'
       count={numberOfPages}
       page={Number(page) || 1}
       variant="outlined"

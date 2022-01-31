@@ -9,7 +9,7 @@ export const getPosts = async (req, res) => {
     const { page } = req.query;
     
     try {
-        const LIMIT = 12;
+        const LIMIT = 4;
         const startIndex = (Number(page) - 1) * LIMIT; // get the starting index of every page
     
         const total = await MovieMessage.countDocuments({});

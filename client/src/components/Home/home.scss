@@ -2,14 +2,15 @@
     width: 100%;
     height: 100%;
     margin: auto;
-    padding: 5px;
+
     .content{
         display: flex;
         flex-direction: column;
-        width: 1100px;
-        background-color: rgb(70, 70, 70);
+        width: 1400px;
+        background-color: #3c3c3c;
         padding: 20px 20px 20px 20px;
         overflow: auto;
+        border-radius: 10px;
         margin: auto;
 
         .search{
@@ -18,7 +19,7 @@
             justify-content: space-between;
             width: 350px;
             padding-bottom: 20px;
-            margin-left: 350px;
+            margin: auto;
             
             .serInput{
                 width: 300px;
@@ -30,7 +31,7 @@
             }
 
             .searchButton{
-                background-color: rgb(190, 80, 1);
+                background-color: #fcb900;
                 color: white;
                 cursor: pointer;
                 width: 80px;
@@ -40,7 +41,7 @@
                 border: none;
 
                 &:hover{
-                    background-color: rgb(131, 55, 0);
+                    background-color: #daa000;
                     color: white;
                 }
             }
@@ -48,7 +49,7 @@
         .movie{
             width: 1000px;
             padding-right: 30px;
-            margin-left: 50px;
+            margin: auto;
 
         }
 
@@ -56,7 +57,6 @@
     .pag{
         padding-top: 20px;
         margin: auto;
-        margin-left: 370px;
         color: white;
     }
 }
