@@ -5,7 +5,7 @@ import './navBar.scss';
 const Navbar = () => {
 
   return (
-    <div className= 'appBar' position="static" color="inherit">
+    <div className= 'appBar' >
       <Link to="/" className='brandContainer' >
         <span component={Link} to="/"  className='head'>PAGINATION EXAMPLE</span>
       </Link>

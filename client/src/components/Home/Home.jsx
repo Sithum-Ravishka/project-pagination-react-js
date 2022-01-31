@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { getMoviesBySearch } from '../../actions/movies';
-import Movies from '../Posts/Movies';
+import Movies from '../Movies/Movies';
 import Pagination from '../Pagination';
 import "./home.scss";
 
@@ -20,14 +20,14 @@ const Home = () => {
 
   const [search, setSearch] = useState('');
   const [tags] = useState([]);
-  const history = useHistory();
+  const navigate  = useNavigate();
 
   const searchMovie = () => {
     if (search.trim() || tags) {
       dispatch(getMoviesBySearch({ search, tags: tags.join(',') }));
-      history.push(`/movies/search?searchQuery=${search || 'none'}&tags=${tags.join(',')}`);
+      navigate(`/movies/search?searchQuery=${search || 'none'}&tags=${tags.join(',')}`);
     } else {
-      history.push('/');
+      navigate('/');
     }
   };
 

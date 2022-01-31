@@ -3,7 +3,7 @@ import { useParams, useLocation } from 'react-router-dom';
 import { Typography, CircularProgress, Grid, Divider } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Movie from '../Posts/Post/Movie';
+import Movie from '../Movies/Movie/Movie';
 import { getMoviesBySearch } from '../../actions/movies';
 
 const CreatorOrTag = () => {
@@ -19,7 +19,7 @@ const CreatorOrTag = () => {
     } else {
       
     }
-  }, [name]);
+  }, [dispatch, location.pathname, name]);
 
   if (!movies.length && !isLoading) return 'No posts';
 
