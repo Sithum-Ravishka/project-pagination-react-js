@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 
-import MovieMessage from '../models/postMessage.js';
+import MovieMessage from '../models/movieMessage.js';
 
 const router = express.Router();
 

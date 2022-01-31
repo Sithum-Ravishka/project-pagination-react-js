@@ -19,7 +19,7 @@ const CreatorOrTag = () => {
     } else {
       
     }
-  }, []);
+  }, [name]);
 
   if (!movies.length && !isLoading) return 'No posts';
 

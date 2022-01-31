@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import movieRoutes from './routes/posts.js';
+import movieRoutes from './routes/movies.js';
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.use(cors());
 
 app.use('/movies', movieRoutes);
 
-const CONNECTION_URL = 'mongodb+srv://SithumRavishkaSubZero:<SR1995Hasi27>18@cluster0.ww6o5.mongodb.net/SubZero?retryWrites=true&w=majority';
+const CONNECTION_URL = '#'; //Paste here your mongoDB connection URL
 const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
