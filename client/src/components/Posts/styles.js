@@ -43,25 +43,6 @@ export default makeStyles((theme) => ({
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
   },
-  [theme.breakpoints.down('sm')]: {
-    appBar: {
-      padding: '10px 20px',
-    },
-    heading: {
-      display: 'none',
-    },
-    userName: {
-      display: 'none',
-    },
-    image: {
-      marginLeft: '5px',
-    },
-    toolbar: {
-      display: 'flex',
-      justifyContent: 'flex-end',
-      width: '160px',
-    },
-  },
 
   actionDiv: {
     textAlign: 'center',

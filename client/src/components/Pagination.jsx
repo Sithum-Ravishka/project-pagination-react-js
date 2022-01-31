@@ -5,7 +5,7 @@ import { Pagination, PaginationItem } from '@material-ui/lab';
 import { Link } from 'react-router-dom';
 
 import { getMovies } from '../actions/movies';
-import './pagination.css';
+import './pagination.scss';
 
 const Paginate = ({ page }) => {
   const { numberOfPages } = useSelector((state) => state.movies);
@@ -26,7 +26,7 @@ const Paginate = ({ page }) => {
       variant="outlined"
       color="primary"
       renderItem={(item) => (
-        <PaginationItem {...item} component={Link} to={`/movies?page=${item.page}`} />
+        <PaginationItem className='item' {...item} component={Link} to={`/movies?page=${item.page}`} />
       )}
     />
     </div>
